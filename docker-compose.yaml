@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  scraper:
+    build: .
+    container_name: foscos-scraper
+    env_file: .env
+    volumes:
+      - ./results:/app/results
+    command: python main.py
