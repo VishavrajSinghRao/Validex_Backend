@@ -48,5 +48,7 @@ RUN pip install --no-cache-dir --upgrade pip \
 # Copy app source
 COPY . /app
 
+EXPOSE 5000
+
 # Default command to run your scraper
-CMD ["python", "scraper.py"]
+CMD ["node", "index.js"]
